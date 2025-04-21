@@ -42,7 +42,7 @@ resource "aws_s3_bucket_public_access_block" "example" {
 resource "aws_dynamodb_table" "DiggerDynamoDBLockTable" {
   name             = var.dynamo_lock_table_id
   billing_mode     = "PAY_PER_REQUEST"
-  stream_enabled   = false
+  stream_enabled   = true
   stream_view_type = "NEW_AND_OLD_IMAGES"
   hash_key         = "PK"
   range_key        = "SK"
