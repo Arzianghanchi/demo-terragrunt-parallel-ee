@@ -4,6 +4,6 @@ terraform {
     bucket         = "digger-demo-terragrunt-parallel-2"
     key            = "prod-vpc/terraform.tfstate"
     region         = "us-east-1"
-    encrypt        = true
+    encrypt        = false
   }
 }

@@ -29,11 +29,10 @@ jobs:
           digger-spec: ${{ inputs.spec }}
           setup-aws: true
           setup-terragrunt: true
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-role-to-assume: arn:aws:iam::924144197303:role/arziandiggercicd
           aws-region: us-east-1
           disable-locking: true
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DIGGER_LICENSE_KEY: ${{ secrets.DIGGER_LICENSE_KEY }
+
